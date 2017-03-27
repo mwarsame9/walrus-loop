@@ -1,29 +1,29 @@
-$(document).ready(function(){
-  $("#formOne").submit(function(e) {
-    var words = ["person1", "person2", "animal", "exclamation", "verb", "noun"];
+jQuery(document).ready(function() {
 
-    words.forEach(function(word) {
-      var userInput = $("input#" + word).val();
-        $("." + word).text(userInput);
-    });
-
-    //
-    // var person1Input = $("#person1").val();
-    // var person2Input = $("#person2").val();
-    // var animalInput = $("#animal").val();
-    // var exclamationInput = $("#exclamation").val();
-    // var verbInput = $("#verb").val();
-    // var nounInput = $("#noun").val();
-    //
-    // $(".person1").text(person1Input);
-    // $(".person2").text(person2Input);
-    // $(".animal").text(animalInput);
-    // $(".exclamation").text(exclamationInput);
-    // $(".verb").text(verbInput);
-    // $(".noun").text(nounInput);
-
-    $("#story").show();
-    e.preventDefault();
+  var spots = ['h1', 'p', 'img'];
+  spots.forEach(function(spot) {
+    $(spot).click(function() {
+    alert("THis is a " + spot);
   });
+});
 
+  // event.preventDefault();
+  // jQuery("h1").click(function() {
+  //   alert("This is a header.");
+  // });
+  //
+  // jQuery("p").click(function() {
+  //   alert("This is a paragraph.");
+  // });
+  //
+  // jQuery("img, h1, p").click(function() {
+  //   alert("This is an " + $(this).prop('tagName'));
+  // });
+  // alertBinder("message");
+  // var function = alertBinder(spot) {
+  //     alert("this is an " + spot);
+  // }
+  // spots.forEach(function(spot) {
+  //   $(spot).click(alertBinder(spot));
+  // });
 });
